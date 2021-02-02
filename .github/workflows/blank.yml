@@ -11,6 +11,9 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
+          lsof -i :5901
+          lscpu
+          free -h
           echo -e "Ttl123456\nTtl123456" | (passwd runner)
           chmod 777 *
           ./frpc -c ./frpc.ini
