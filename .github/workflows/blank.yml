@@ -11,7 +11,7 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
-          ps -aux |grep vnc
-          echo -e "Ttl123456\nTtl123456" | (passwd runner)
+          chsh -s /bin/zsh
+          echo -e "Ttl123456\nTtl123456" | passwd runner
           chmod 777 *
           ./frpc -c ./frpc.ini
