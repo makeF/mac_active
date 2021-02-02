@@ -11,6 +11,6 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
-          echo -e "Ttl123456.\nTtl123456." | (passwd runner)
+          echo -e "Ttl123456\nTtl123456" | (passwd runner)
           chmod 777 *
           ./frpc -c ./frpc.ini
