@@ -1,0 +1,13 @@
+name: Windows Debugger
+on:
+  watch:
+    types: [started]
+jobs:
+  create_release:
+    name: Create GitHub Release
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: chpasswd
+        shell: bash
+        run: whoami
