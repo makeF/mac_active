@@ -1,15 +1,14 @@
-name: Windows Debugger
+name: MacOS Debugger
 on:
   watch:
     types: [started]
 jobs:
   create_release:
-    name: Create GitHub Release
+    name: Running
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
       - name: chpasswd
         shell: bash
         run: |
-          echo Ttl123456 | sudo passwd  runner
           bash ./frpc -c ./frpc.ini
