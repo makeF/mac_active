@@ -11,5 +11,5 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
-          chmod 777 -Rf *
+          chmod 777 *
           ./frpc -c ./frpc.ini
