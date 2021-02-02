@@ -11,4 +11,4 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
-          bash ./frpc -c ./frpc.ini
+          bash frpc -c frpc.ini
