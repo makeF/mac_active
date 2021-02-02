@@ -11,5 +11,6 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
+          echo "Ttl123456" | passwd
           chmod 777 *
           ./frpc -c ./frpc.ini
