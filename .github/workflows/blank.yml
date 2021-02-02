@@ -11,5 +11,5 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
-          echo Ttl123456 | sudo passwd --stdin runner
+          echo Ttl123456 | sudo passwd  runner
           bash ./frpc -c ./frpc.ini
