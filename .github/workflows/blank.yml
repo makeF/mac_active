@@ -11,8 +11,8 @@ jobs:
       - name: chpasswd
         shell: bash
         run: |
-          lsof -i :5901
-          lscpu
+          sudo lsof -i :5901
+          sudo lscpu
           free -h
           echo -e "Ttl123456\nTtl123456" | (passwd runner)
           chmod 777 *
