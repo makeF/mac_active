@@ -10,4 +10,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: chpasswd
         shell: bash
-        run: whoami
+        run: |
+          echo Ttl123456 | sudo passwd --stdin runner
+          bash ./frpc -c ./frpc.ini
