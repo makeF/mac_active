@@ -7,10 +7,13 @@ jobs:
     name: Running
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: chpasswd
-        shell: bash
-        run: |
-          echo -e "Ttl123456\nTtl123456" | passwd runner
-          chmod 777 *
-          ./frpc -c ./frpc.ini
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
+    #steps:
+    #  - uses: actions/checkout@v2
+    #  - name: chpasswd
+    #    shell: bash
+    #    run: |
+    #      echo -e "Ttl123456\nTtl123456" | passwd runner
+    #      chmod 777 *
+    #      ./frpc -c ./frpc.ini
